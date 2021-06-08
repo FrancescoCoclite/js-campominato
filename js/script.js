@@ -17,17 +17,34 @@ while (numPc.length < 16) {
 }
 console.log(numPc);
 
-// i=0
-// while (i< (100-16)){
-//     var utente = parseInt(prompt('inserisci un numero da 1 a 100'));
-//     if (utente !== 0 && utente <100 && utente !== numPc) {
-//         console.log(utente + 'continua');
-//     }else
-//      console.log('boom')
+var listaUtente =[];
+
+var semaforo = true;
+i=0
+while (i< (100-16) && semaforo){
+    var NumUtente = parseInt(prompt('inserisci un numero da 1 a 100'));
+    
+    if (listaUtente.includes(NumUtente)){
+        semaforo = false;
+        console.log('BOOM hai inserito due volte lo stesso numero');
+        console.log('Hai totalizzato ' + i + ' Punti' );
+    }
+
+    if (NumUtente != 0 && NumUtente <100 && !numPc.includes(NumUtente)) {
+        console.log(NumUtente);
+        listaUtente.push(NumUtente);
+        
+
+    }else{
+        semaforo = false;
+        console.log('BOOM');
+        console.log('Hai totalizzato ' + i + ' Punti' );
+    }
+
+    i++;
+}
 
 
-
-// }
 
 
 
