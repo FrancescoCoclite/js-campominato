@@ -9,7 +9,7 @@ var numPc = [];
 
 
 while (numPc.length < 16) {
-    var numRan = (randomNumb(1,100))
+    var numRan = (randomNumb(1,100));
     if (!numPc.includes(numRan)) {
         numPc.push(numRan); 
     }
@@ -17,10 +17,17 @@ while (numPc.length < 16) {
 }
 console.log(numPc);
 
-i=0
-while (i< (100-16)){
-    
-}
+// i=0
+// while (i< (100-16)){
+//     var utente = parseInt(prompt('inserisci un numero da 1 a 100'));
+//     if (utente !== 0 && utente <100 && utente !== numPc) {
+//         console.log(utente + 'continua');
+//     }else
+//      console.log('boom')
+
+
+
+// }
 
 
 
