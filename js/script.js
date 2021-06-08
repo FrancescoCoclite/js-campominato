@@ -7,13 +7,22 @@
 var numPc = [];
 
 
-for (var i = 0; i< 16; i++){
-    numPc.push(randomNumb(1,100));
 
-    if (numPc[i] != randomNumb(1,100))
-    console.log(numPc);
-
+while (numPc.length < 16) {
+    var numRan = (randomNumb(1,100))
+    if (!numPc.includes(numRan)) {
+        numPc.push(numRan); 
+    }
+    
 }
+console.log(numPc);
+
+i=0
+while (i< (100-16)){
+    
+}
+
+
 
 
 
