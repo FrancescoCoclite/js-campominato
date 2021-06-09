@@ -9,6 +9,8 @@ document.getElementById("start").addEventListener("click", function(){
     var numPc = [];
     var difficolta = parseInt(prompt('Seleziona una difficoltà da 0 a 2'))
     
+     document.getElementById('difficolta').innerHTML =
+     difficolta;
     
     while (numPc.length < 16 && difficolta == 0) {
         var numRan = (randomNumb(1,100));
@@ -44,7 +46,7 @@ document.getElementById("start").addEventListener("click", function(){
             semaforo = false;
             console.log('BOOM hai inserito due volte lo stesso numero');
             console.log('Hai totalizzato ' + i + ' Punti' );
-            document.getElementById('punteggio').innerHTML = i
+            document.getElementById('punteggio').innerHTML = i;
             document.getElementById('risultato').innerHTML = 'BOOM hai inserito due volte lo stesso numero';
         }
     
@@ -58,8 +60,8 @@ document.getElementById("start").addEventListener("click", function(){
             semaforo = false;
             console.log('BOOM');
             console.log('Hai totalizzato ' + i + ' Punti' )
-            document.getElementById('punteggio').innerHTML = i
-            document.getElementById('risultato').innerHTML = 'BOOM hai volpito una bomba';
+            document.getElementById('punteggio').innerHTML = i;
+            document.getElementById('risultato').innerHTML = 'BOOM hai colpito una bomba';
         }
     
         i++;
