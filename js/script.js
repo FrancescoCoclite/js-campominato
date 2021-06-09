@@ -5,15 +5,26 @@
 
 
 var numPc = [];
+var difficolta = parseInt(prompt('Seleziona una difficoltà da 0 a 2'))
 
 
-
-while (numPc.length < 16) {
+while (numPc.length < 16 && difficolta == 0) {
     var numRan = (randomNumb(1,100));
     if (!numPc.includes(numRan)) {
         numPc.push(numRan); 
     }
-    
+}
+while (numPc.length < 16 && difficolta == 1) {
+    var numRan = (randomNumb(1,80));
+    if (!numPc.includes(numRan)) {
+        numPc.push(numRan); 
+    }
+}
+while (numPc.length < 16 && difficolta == 2) {
+    var numRan = (randomNumb(1,50));
+    if (!numPc.includes(numRan)) {
+        numPc.push(numRan); 
+    }
 }
 console.log(numPc);
 
@@ -21,6 +32,9 @@ var listaUtente =[];
 
 var semaforo = true;
 i=0
+
+
+// inserire funzione con min e max
 while (i< (100-16) && semaforo){
     var NumUtente = parseInt(prompt('inserisci un numero da 1 a 100'));
     
