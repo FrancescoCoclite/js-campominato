@@ -12,6 +12,11 @@ document.getElementById("start").addEventListener("click", function(){
      document.getElementById('difficolta').innerHTML =
      difficolta;
     
+    while (difficolta < 0 || difficolta > 2 || isNaN(difficolta)){
+        alert('Inserire un numero tra 0 e 2')
+        var difficolta = parseInt(prompt('Seleziona una difficoltà da 0 a 2'))
+    }
+
     while (numPc.length < 16 && difficolta == 0) {
         var numRan = (randomNumb(1,100));
         if (!numPc.includes(numRan)) {
@@ -37,8 +42,6 @@ document.getElementById("start").addEventListener("click", function(){
     var semaforo = true;
     i=0
     
-    
-    
     while (i< (100-16) && semaforo){
         var NumUtente = parseInt(prompt('inserisci un numero da 1 a 100'));
         
@@ -50,7 +53,7 @@ document.getElementById("start").addEventListener("click", function(){
             document.getElementById('risultato').innerHTML = 'BOOM hai inserito due volte lo stesso numero';
         }
     
-        if (NumUtente != 0 && NumUtente <100 && !numPc.includes(NumUtente)) {
+        if (NumUtente > 0 && NumUtente != 0 && NumUtente <100 && !numPc.includes(NumUtente)) {
             console.log(NumUtente);
             listaUtente.push(NumUtente);
             
